@@ -5,14 +5,14 @@ The regular way to upload values to Thingspeak is via the Thingspeak API. There 
 
 There are two topics one can use:
 To upload more than 1 field in one go use:
-channels/<channelID/publish/<channelAPI>
+channels/YOURchannelID/publish/YOURchannelAPI
 
 To upload an individual channel use:
-channels/<channelID>/publish/fields/field1/<channelAPI> (just usinf field1 as example)
+channels/YOURchannelID/publish/fields/field1/YOURchannelAPI (just using field1 as example)
 
-In the first case, the payload string is as follows: field1=<value1>&field2=<value2>&status=MQTTPUBLISH
+In the first case, the payload string is as follows: field1=value1&field2=value2&status=MQTTPUBLISH
 
-In the second case the payload string is just <value1>
+In the second case the payload string is just value1
 
 In the program below I am using the PubSubClient from Knolleary. The "credentials.h" file is a file that defines my WiFi credentials, you can either create such a file yourself or just insert your wificredentials.
 
